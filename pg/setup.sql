@@ -254,7 +254,6 @@ begin
     insert into department (name) values ('IT Support');
     insert into department (name) values ('IT Helpdesk');
     insert into department (name) values ('Recruiting');
-    commit;
 end $$;
 
 -- the core table, with many relations (also a self - manager)
@@ -535,7 +534,6 @@ begin
         ('Kimberely', 'Grant', 9263, '2020-05-24', v_sarp, 7000, 0.10);
     insert into employee (first_name, last_name, phone, hired, job_id, salary, commission) values
         ('Charles', 'Johnson', 9262, '2021-01-04', v_sarp, 6200, 0.05);    
-    commit;
 end $$;
 
 alter table department add constraint department_manager_fk foreign key (manager_id) references employee (employee_id);
