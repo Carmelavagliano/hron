@@ -78,7 +78,7 @@ begin
     insert into country (country_id, name, region_id) values ('US', 'United States of America', v_americas);
     insert into country (country_id, name, region_id) values ('ZM', 'Zambia', v_mea);
     insert into country (country_id, name, region_id) values ('ZW', 'Zimbabwe', v_mea);
-    commit;
+
 end $$;
 
 -- "many" location in one country
@@ -172,7 +172,6 @@ begin
         ('Pieter Breughelstraat 837', '3029SK', 'Utrecht', 'Utrecht', v_nl);
     insert into location (street_address, postal_code, city, state_province, country_id) values
         ('Mariano Escobedo 9991', '11932', 'Mexico City', 'Distrito Federal', v_mx);
-    commit;
 end $$;
 
 -- "one" job to many employees
